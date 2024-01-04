@@ -8,7 +8,7 @@ contract MyToken is ERC20{
   address public receiver;
   uint256 public latestTransferTimestamp;
   event TransferInformation(address indexed from, address indexed to, uint256 value, uint256 timestamp);
-  uint initialSupply = 2000;
+  uint initialSupply = 2000 * (10 ** decimals());
 
   constructor() ERC20("AstanaItUniversity_Ansar", "ANS"){
     _mint(msg.sender, initialSupply);
